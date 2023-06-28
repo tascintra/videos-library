@@ -27,8 +27,19 @@ module.exports = {
       },
 
       backgroundImage: {
-        'gradient-linear':
-          'linear-gradient(-45deg, #2c83fb 0%, #1f76f0 100%);',
+        'gradient-linear': 'linear-gradient(-45deg, #2c83fb 0%, #1f76f0 100%);',
+      },
+
+      content: {
+        'asset-header': 'url("../assets/asset-header.png")',
+      },
+
+      borderRadius: {
+        custom: '3rem 3rem 3rem 0.75rem',
+      },
+
+      screens: {
+        xs: '416px',
       },
     },
   },

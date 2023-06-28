@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import LeadsterLogo from '@/assets/logos/logo.png'
+import LeadsterLogo from '@/assets/logo.png'
 
 export const Header = () => {
   return (

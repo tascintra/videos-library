@@ -1,1 +1,5 @@
 export { Banner } from './Banner/Banner'
+export { MainTitle } from './Banner/MainTitle'
+export { LineSeparator } from './Banner/Separator'
+export { Subtitle } from './Banner/Subtitle'
+export { Tooltip } from './Banner/Tooltip'
