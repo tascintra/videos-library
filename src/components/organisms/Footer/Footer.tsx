@@ -1,7 +1,14 @@
+import { Cases, Follow, MainLinks, Materials } from '@/components/molecules'
+
 interface FooterProps {}
 
-export const Footer = ({}:FooterProps) => {
+export const Footer = ({}: FooterProps) => {
   return (
-    <div>Footer</div>
+    <footer>
+      <MainLinks />
+      <Cases />
+      <Materials />
+      <Follow />
+    </footer>
   )
 }
