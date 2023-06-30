@@ -1,7 +1,16 @@
-interface MainLinksProps {}
+import { CustomLink, Title } from '@/components/atoms'
 
-export const MainLinks = ({}:MainLinksProps) => {
+const links = ['Home', 'Ferramenta', 'Preços', 'Contato']
+
+export const MainLinks = () => {
   return (
-    <div>MainLinks</div>
+    <section className='flex flex-col gap-8'>
+      <Title classname='mb-6'>Links Principais</Title>
+      {links.map((link) => (
+        <CustomLink key={link} href={`#${link}`}>
+          {link}
+        </CustomLink>
+      ))}
+    </section>
   )
 }
