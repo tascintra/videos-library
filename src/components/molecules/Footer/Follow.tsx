@@ -25,6 +25,11 @@ const socialLinks = [
   },
 ]
 
+const contactInfo = [
+  { label: 'E-mail', value: 'contato@leadster.com.br' },
+  { label: 'Telefone', value: '(42) 98828-9851' },
+]
+
 export const Follow = () => {
   return (
     <section className="flex flex-col gap-6">
@@ -41,12 +46,11 @@ export const Follow = () => {
           </Link>
         ))}
       </div>
-      <p className="text-sec-500">
-        <span className="text-prim-800">E-mail:</span> contato@leadster.com.br
-      </p>
-      <p className="text-sec-500">
-        <span className="text-prim-800">Telefone:</span> (42) 98828-9851
-      </p>
+      {contactInfo.map(({ label, value }) => (
+        <p key={label} className="text-sec-500">
+          <span className="text-prim-800">{label}:</span> {value}
+        </p>
+      ))}
     </section>
   )
 }

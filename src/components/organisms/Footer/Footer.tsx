@@ -1,16 +1,33 @@
 import Image from 'next/image'
 import LeadsterLogo from '@/assets/logo.png'
-import {
-  MainLinks,
-  Cases,
-  Materials,
-  Follow,
-  FooterBar,
-} from '@/components/molecules'
+import { Follow, FooterBar, FooterWidget } from '@/components/molecules'
 
-interface FooterProps {}
+const footerLinks = [
+  {
+    title: 'Links Principais',
+    links: ['Home', 'Ferramenta', 'Preços', 'Contato'],
+  },
+  {
+    title: 'Cases',
+    links: [
+      'Geração de Leads B2B',
+      'Geração de Leads em Software',
+      'Geração de Leads em Imobiliária',
+      'Cases de Sucesso',
+    ],
+  },
+  {
+    title: 'Materiais',
+    links: [
+      'Blog',
+      'Parceria com Agências',
+      'Guia Definitivo do Marketing',
+      'Materiais Gratuitos',
+    ],
+  },
+]
 
-export const Footer = ({}: FooterProps) => {
+export const Footer = () => {
   return (
     <footer className="flex w-full flex-col items-center">
       <div className="my-14">
@@ -20,9 +37,9 @@ export const Footer = ({}: FooterProps) => {
         </p>
       </div>
       <div className="mb-20 grid w-full max-w-6xl grid-cols-1 justify-between gap-8 px-4 sm:grid-cols-2 lg:flex">
-        <MainLinks />
-        <Cases />
-        <Materials />
+        {footerLinks.map(({ title, links }) => (
+          <FooterWidget key={title} title={title} links={links} />
+        ))}
         <Follow />
       </div>
       <FooterBar />

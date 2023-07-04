@@ -1,11 +1,14 @@
 import { CustomLink, Title } from '@/components/atoms'
 
-const links = ['Home', 'Ferramenta', 'Preços', 'Contato']
+interface IFooterWidget {
+  title: string
+  links: Array<string>
+}
 
-export const MainLinks = () => {
+export const FooterWidget = ({ title, links }: IFooterWidget) => {
   return (
     <section className="flex flex-col gap-8">
-      <Title classname="mb-6">Links Principais</Title>
+      <Title classname="lg:mb-6">{title}</Title>
       {links.map((link) => (
         <CustomLink key={link} href={`#${link}`}>
           {link}
