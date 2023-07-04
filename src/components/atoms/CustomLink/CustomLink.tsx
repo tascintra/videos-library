@@ -8,7 +8,7 @@ export const CustomLink = ({ children, ...props }: CustomLinkProps) => {
   return (
     <Link
       {...props}
-      className="text-base text-sec-500 transition duration-200 hover:text-prim-500"
+      className="max-w-fit text-base text-sec-500 transition duration-500 hover:text-prim-500"
     >
       {children}
     </Link>
