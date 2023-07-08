@@ -1,7 +1,15 @@
+import { FilterMenu, VideoCard } from '@/components/molecules'
+
 interface VideosContentsProps {}
 
 export const VideosContents = ({}:VideosContentsProps) => {
   return (
-    <div>VideosContents</div>
+    <section>
+      <FilterMenu />
+      <div>
+        <VideoCard />
+      </div>
+      Pagination
+    </section>
   )
 }
